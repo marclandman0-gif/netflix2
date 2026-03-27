@@ -54,3 +54,10 @@ h4{
     color: white;
     margin-left: 1.5em;
 }
+footer img {
+    width: 30px;
+    height: auto;
+    margin: 0 10px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
