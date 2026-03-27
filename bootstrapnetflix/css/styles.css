@@ -4,6 +4,22 @@ html, body {
 
 }
 
+.dropdown-menu {
+    background-color: black;
+    border: 1px solid #333;
+    position: absolute;
+    z-index: 2000;
+}
+
+.dropdown-item {
+    color: white;
+}
+
+.dropdown-item:hover {
+    background-color: #e50914; /* Netflix rood */
+    color: white;
+}
+
 header {
     background-color: black;
     color: white; 
@@ -28,6 +44,11 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease; /* hier zetten */
+}
+
+.col img:hover {
+    transform: scale(1.); /* iets minder groot is vaak mooier */
 }
 h4{
     color: white;
