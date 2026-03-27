@@ -41,14 +41,14 @@ header {
 
 }
 .col img {
-    width: 100%;
-    height: 100%;
+    max-width: 80%;
+    height: auto;
     object-fit: cover;
     transition: transform 0.3s ease; /* hier zetten */
 }
 
 .col img:hover {
-    transform: scale(1.); /* iets minder groot is vaak mooier */
+    transform: scale(1.15); /* iets minder groot is vaak mooier */
 }
 h4{
     color: white;
