@@ -74,10 +74,8 @@ nav img {
     height: auto;
 }
 
-/* ========================= */
-/* ⬇️ DROPDOWN */
-/* ========================= */
 
+/* Dropdown */
 .nav-item.dropdown {
     position: relative;
 }
@@ -106,10 +104,7 @@ nav img {
     color: white;
 }
 
-/* ========================= */
-/* 🖼 HEADER */
-/* ========================= */
-
+/*achtergrond header*/
 header {
     background-color: black;
     color: white;
@@ -118,9 +113,7 @@ header {
     background-position: center;
 }
 
-/* ========================= */
-/* 📄 CONTENT */
-/* ========================= */
+/* afbeedlingen en titels */
 
 .container, .row, .carousel-item, .col {
     background-color: black;
@@ -145,9 +138,7 @@ h4 {
     margin-left: 1.5em;
 }
 
-/* ========================= */
-/* 🖼 CAROUSEL */
-/* ========================= */
+/* Carousel styling */
 
 .carousel img {
     width: 100%;
@@ -156,9 +147,7 @@ h4 {
     border-radius: 5px;
 }
 
-/* ========================= */
-/* 👣 FOOTER */
-/* ========================= */
+/*footer styling*/
 
 footer {
     text-align: center;
@@ -173,9 +162,7 @@ footer img {
     transition: filter 0.3s ease;
 }
 
-/* ========================= */
-/* 📱 RESPONSIVE (MOBIEL) */
-/* ========================= */
+/*responsiveness*/
 
 @media (max-width: 37.5rem) {
 
@@ -196,6 +183,7 @@ footer img {
         flex-direction: column;
         align-items: flex-start;
         width: 100%;
+        text-align: left;
     }
 
     nav li {
@@ -209,7 +197,6 @@ footer img {
 
     /* Dropdown mobiel */
     .dropdown-menu {
-        position: static;
         border: none;
         width: 100%;
     }
@@ -218,7 +205,7 @@ footer img {
         padding-left: 2rem;
     }
 
-    /* 📱 TELEFOON — 1 afbeelding per slide */
+    /* TELEFOON, 1 afbeelding per slide */
     .carousel-item .row {
         display: flex;
         flex-wrap: nowrap;
@@ -236,9 +223,9 @@ footer img {
     }
 }
 
-/* ========================= */
-/* 💻 iPAD — 3 afbeeldingen per slide */
-/* ========================= */
+
+/* Ipad, 3 afbeeldingen per slide */
+
 
 @media (min-width: 37.5rem) and (max-width: 64rem) {
 
@@ -259,9 +246,8 @@ footer img {
     }
 }
 
-/* ========================= */
-/* 🖥 DESKTOP — 5 afbeeldingen per slide */
-/* ========================= */
+/* DESKTOP, 5 afbeeldingen per slide */
+
 
 @media (min-width: 64rem) {
 
