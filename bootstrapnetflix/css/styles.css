@@ -1,12 +1,18 @@
-/* Algemene styling */
+/* ========================= */
+/* 🌑 ALGEMENE STYLING */
+/* ========================= */
+
 html, body {
     background-color: black !important;
     color: white;
     margin: 0;
     padding: 0;
 }
- 
-/* NAVBAR */
+
+/* ========================= */
+/* 🔝 NAVBAR */
+/* ========================= */
+
 .topnav {
     position: sticky;
     top: 0;
@@ -14,7 +20,7 @@ html, body {
     width: 100%;
     z-index: 1000;
 }
- 
+
 /* Hamburger knop */
 #hamburger {
     display: none;
@@ -25,12 +31,12 @@ html, body {
     color: white;
     cursor: pointer;
 }
- 
+
 #hamburger.open {
     background-color: black;
     color: white;
 }
- 
+
 /* Menu lijst */
 nav ul {
     list-style: none;
@@ -39,13 +45,13 @@ nav ul {
     display: flex;
     align-items: center;
 }
- 
+
 /* Menu items */
 nav li {
     display: flex;
     align-items: center;
 }
- 
+
 /* Links */
 nav a {
     display: flex;
@@ -57,22 +63,25 @@ nav a {
     font-size: 1rem;
     transition: transform 0.2s ease;
 }
- 
+
 nav a:hover {
     transform: scale(1.1);
 }
- 
+
 /* Logo */
 nav img {
     width: 7rem;
     height: auto;
 }
- 
-/* DROPDOWN */
+
+/* ========================= */
+/* ⬇️ DROPDOWN */
+/* ========================= */
+
 .nav-item.dropdown {
     position: relative;
 }
- 
+
 .dropdown-menu {
     background-color: black;
     border: 1px solid #333;
@@ -82,22 +91,25 @@ nav img {
     display: none;
     min-width: 200px;
 }
- 
-/* Bootstrap active dropdown fix */
+
+/* Bootstrap hover fix */
 .nav-item.dropdown:hover .dropdown-menu {
     display: block;
 }
- 
+
 .dropdown-item {
     color: white;
 }
- 
+
 .dropdown-item:hover {
     background-color: #e50914;
     color: white;
 }
- 
-/* HEADER */
+
+/* ========================= */
+/* 🖼 HEADER */
+/* ========================= */
+
 header {
     background-color: black;
     color: white;
@@ -105,21 +117,16 @@ header {
     background-size: cover;
     background-position: center;
 }
- 
-/* CONTENT */
-.container, .row {
+
+/* ========================= */
+/* 📄 CONTENT */
+/* ========================= */
+
+.container, .row, .carousel-item, .col {
     background-color: black;
     color: white;
 }
- 
-.carousel-item {
-    background-color: black;
-}
- 
-.col {
-    color: white;
-}
- 
+
 /* Afbeeldingen */
 .col img {
     max-width: 80%;
@@ -127,23 +134,37 @@ header {
     object-fit: cover;
     transition: transform 0.3s ease;
 }
- 
+
 .col img:hover {
     transform: scale(1.15);
 }
- 
+
 /* Titels */
 h4 {
     color: white;
     margin-left: 1.5em;
 }
- 
-/* FOOTER */
+
+/* ========================= */
+/* 🖼 CAROUSEL */
+/* ========================= */
+
+.carousel img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* ========================= */
+/* 👣 FOOTER */
+/* ========================= */
+
 footer {
     text-align: center;
     padding: 1rem;
 }
- 
+
 footer img {
     width: 30px;
     height: auto;
@@ -151,56 +172,112 @@ footer img {
     filter: grayscale(100%);
     transition: filter 0.3s ease;
 }
- 
+
 /* ========================= */
 /* 📱 RESPONSIVE (MOBIEL) */
 /* ========================= */
- 
+
 @media (max-width: 37.5rem) {
- 
+
     #hamburger {
         display: block;
     }
- 
+
     #menuItems {
         display: none;
         width: 100%;
     }
- 
+
     .topnav.show #menuItems {
         display: block;
     }
- 
+
     nav ul {
         flex-direction: column;
         align-items: flex-start;
         width: 100%;
     }
- 
+
     nav li {
         width: 100%;
     }
- 
+
     nav a {
         width: 100%;
         padding: 1rem;
     }
- 
+
     /* Dropdown mobiel */
     .dropdown-menu {
         position: static;
         border: none;
         width: 100%;
     }
- 
+
     .dropdown-item {
         padding-left: 2rem;
     }
+
+    /* 📱 TELEFOON — 1 afbeelding per slide */
+    .carousel-item .row {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .carousel-item .col {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
 }
- /* Zorg dat alle carousel-afbeeldingen dezelfde grootte hebben */
-.carousel img {
-    width: 100%;
-    height: 250px; /* kies zelf een hoogte */
-    object-fit: cover;
-    border-radius: 5px;
+
+/* ========================= */
+/* 💻 iPAD — 3 afbeeldingen per slide */
+/* ========================= */
+
+@media (min-width: 37.5rem) and (max-width: 64rem) {
+
+    .carousel-item .row {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .carousel-item .col {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+/* ========================= */
+/* 🖥 DESKTOP — 5 afbeeldingen per slide */
+/* ========================= */
+
+@media (min-width: 64rem) {
+
+    .carousel-item .row {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .carousel-item .col {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
 }
