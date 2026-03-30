@@ -1,62 +1,203 @@
-body {
+/* Algemene styling */
+html, body {
     background-color: black !important;
     color: white;
+    margin: 0;
+    padding: 0;
 }
-
+ 
+/* NAVBAR */
+.topnav {
+    position: sticky;
+    top: 0;
+    background-color: black;
+    width: 100%;
+    z-index: 1000;
+}
+ 
+/* Hamburger knop */
+#hamburger {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    color: white;
+    cursor: pointer;
+}
+ 
+#hamburger.open {
+    background-color: black;
+    color: white;
+}
+ 
+/* Menu lijst */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+ 
+/* Menu items */
+nav li {
+    display: flex;
+    align-items: center;
+}
+ 
+/* Links */
+nav a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: transform 0.2s ease;
+}
+ 
+nav a:hover {
+    transform: scale(1.1);
+}
+ 
+/* Logo */
+nav img {
+    width: 7rem;
+    height: auto;
+}
+ 
+/* DROPDOWN */
+.nav-item.dropdown {
+    position: relative;
+}
+ 
 .dropdown-menu {
     background-color: black;
     border: 1px solid #333;
     position: absolute;
-    z-index: 2000;
+    top: 100%;
+    left: 0;
+    display: none;
+    min-width: 200px;
 }
-
+ 
+/* Bootstrap active dropdown fix */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+ 
 .dropdown-item {
     color: white;
 }
-
+ 
 .dropdown-item:hover {
-    background-color: #e50914; /* Netflix rood */
+    background-color: #e50914;
     color: white;
 }
-
+ 
+/* HEADER */
 header {
     background-color: black;
-    color: white; 
+    color: white;
     background-image: url(../img/achtergrondpagina.jpg);
+    background-size: cover;
+    background-position: center;
 }
-
+ 
+/* CONTENT */
 .container, .row {
     background-color: black;
-    color: white; 
+    color: white;
 }
-
+ 
 .carousel-item {
     background-color: black;
 }
-
-/* 👉 TOEGEVOEGD: alle carousel afbeeldingen even groot */
-.carousel-item img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-}
-
+ 
 .col {
     color: white;
 }
-
+ 
+/* Afbeeldingen */
 .col img {
     max-width: 80%;
     height: auto;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
-
+ 
 .col img:hover {
     transform: scale(1.15);
 }
-
+ 
+/* Titels */
 h4 {
     color: white;
     margin-left: 1.5em;
 }
+ 
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 1rem;
+}
+ 
+footer img {
+    width: 30px;
+    height: auto;
+    margin: 0 10px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+ 
+footer img:hover {
+    filter: grayscale(0%);
+}
+ 
+/* ========================= */
+/* 📱 RESPONSIVE (MOBIEL) */
+/* ========================= */
+ 
+@media (max-width: 37.5rem) {
+ 
+    #hamburger {
+        display: block;
+    }
+ 
+    #menuItems {
+        display: none;
+        width: 100%;
+    }
+ 
+    .topnav.show #menuItems {
+        display: block;
+    }
+ 
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+ 
+    nav li {
+        width: 100%;
+    }
+ 
+    nav a {
+        width: 100%;
+        padding: 1rem;
+    }
+ 
+    /* Dropdown mobiel */
+    .dropdown-menu {
+        position: static;
+        border: none;
+        width: 100%;
+    }
+ 
+    .dropdown-item {
+        padding-left: 2rem;
+    }
+}
+ 
