@@ -1,17 +1,14 @@
-/* ========================= */
-/* 🌑 ALGEMENE STYLING */
-/* ========================= */
+
 
 html, body {
     background-color: black !important;
     color: white;
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-/* ========================= */
-/* 🔝 NAVBAR */
-/* ========================= */
+/* Navigatiebalk */
 
 .topnav {
     position: sticky;
