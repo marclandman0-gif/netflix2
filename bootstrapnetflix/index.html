@@ -35,6 +35,18 @@
                 <li><a href="inlog.html">Inlog</a></li>
             </ul>
         </div>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
+                Categorieën
+            </a>
+
+            <ul class="dropdown-menu p-3" style="min-width: 220px;">
+                <li><label><input type="checkbox" class="filter" value="trending" checked> Trending</label></li>
+                <li><label><input type="checkbox" class="filter" value="films" checked> Films</label></li>
+                <li><label><input type="checkbox" class="filter" value="series" checked> Series</label></li>
+            </ul>
+        </li>
         </div>
     </nav>
     <hr>
@@ -44,9 +56,10 @@
     </header>
     <hr>
 
-    <h4>Trending</h4>
+    <h4 class="trending">Trending</h4>
+    <div id="carouselExample" class="carousel slide trending" data-bs-touch="false">
 
-    <div id="carouselExample" class="carousel slide" data-bs-touch="false">
+
 
         <div class="carousel-inner">
 
@@ -90,9 +103,9 @@
 
     </div>
 
-    <h4>Films</h4>
+    <h4 class="films">Films</h4>
+    <div id="carouselExample2" class="carousel slide films" data-bs-touch="false">
 
-    <div id="carouselExample2" class="carousel slide 2" data-bs-touch="false">
 
         <div class="carousel-inner">
 
@@ -135,9 +148,9 @@
         </button>
 
     </div>
-    <h4>Series</h4>
 
-    <div id="carouselExample3" class="carousel slide 3" data-bs-touch="false">
+    <h4 class="series">Series</h4>
+    <div id="carouselExample3" class="carousel slide series" data-bs-touch="false">
 
         <div class="carousel-inner">
 
@@ -145,9 +158,9 @@
             <div class="carousel-item active ">
                 <div class="container">
                     <div class="row text-center">
-                        <div class="col"><img src="img series/lupin.png" ></div>
-                        <div class="col"><img src="img series/crooks.png" ></div>
-                        <div class="col"><img src="img series/fauda.png" ></div>
+                        <div class="col"><img src="img series/lupin.png"></div>
+                        <div class="col"><img src="img series/crooks.png"></div>
+                        <div class="col"><img src="img series/fauda.png"></div>
                         <div class="col"><img src="img series/la casa berlin.png"></div>
                         <div class="col"><img src="img series/the recruit.png"></div>
 
@@ -185,7 +198,7 @@
     <footer class="text-center p-5">
         <p>&copy; 2024 Netflix</p>
     </footer>
-    
+
     <script>
         function toggle() {
             const nav = document.getElementById("myTopnav");
@@ -193,6 +206,21 @@
             nav.classList.toggle("show");
             hamburger.classList.toggle("open");
         }
+    </script>
+
+    <script>
+        const checkboxes = document.querySelectorAll('.filter');
+
+        checkboxes.forEach(cb => {
+            cb.addEventListener('change', () => {
+                const category = cb.value;
+                const elements = document.querySelectorAll('.' + category);
+
+                elements.forEach(el => {
+                    el.style.display = cb.checked ? '' : 'none';
+                });
+            });
+        });
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">

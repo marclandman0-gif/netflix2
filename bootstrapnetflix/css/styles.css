@@ -90,13 +90,9 @@ nav img {
     display: block;
 }
 
-.dropdown-item {
+label {
     color: white;
-}
-
-.dropdown-item:hover {
-    background-color: #e50914;
-    color: white;
+    margin-right: 0.5rem;
 }
 
 /*achtergrond header*/
