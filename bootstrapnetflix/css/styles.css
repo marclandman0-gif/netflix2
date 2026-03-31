@@ -283,10 +283,16 @@ footer img {
         display: flex;
         flex-wrap: nowrap;
     }
- 
+
     .carousel-item .col {
         flex: 0 0 100%;
         max-width: 100%;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
     }
 }
 
@@ -298,6 +304,21 @@ footer img {
         flex: 0 0 33.33%;
         max-width: 33.33%;
     }
+     .carousel-item .row {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .carousel-item .col {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
 }
 
 
@@ -308,4 +329,5 @@ footer img {
         flex: 0 0 20%;
         max-width: 20%;
     }
+
 }
