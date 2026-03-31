@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,55 +9,76 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>Series - Netflix</title>
 </head>
-
+ 
 <body>
-
-
+ 
+ 
     <nav id="myTopnav" class="topnav">
+ 
     <!-- 🍔 Hamburger -->
     <button id="hamburger" class="icon" onclick="toggle()">
         &#9776;
     </button>
-
+ 
     <!-- 📂 Menu -->
     <div id="menuItems">
         <ul>
-
+ 
             <!-- Logo -->
             <li>
                 <a href="index.html">
                     <img src="img/netflixlogotext.png" alt="netflixtext">
                 </a>
             </li>
-
+ 
             <li><a href="index.html">Home</a></li>
             <li><a href="films.html">Films</a></li>
             <li><a href="series.html">Series</a></li>
-
+ 
         </ul>
     </div>
-
+ 
     <!-- 👤 Profiel rechts -->
     <div class="ms-auto pe-3">
         <a href="inlog.html">
             <img src="img/acc1.png" class="profile-icon">
         </a>
     </div>
-
-</nav>
  
-
+</nav>
+        <!-- dropdown menu -->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
+                Categorieën
+            </a>
+ 
+            <ul class="dropdown-menu p-3">
+                <li>
+                    <label><input type="checkbox" class="filter" value="top10" checked> Top 10</label>
+                </li>
+                <li>
+                    <label><input type="checkbox" class="filter" value="populair" checked> Populaire series</label>
+                </li>
+                <li>
+                    <label><input type="checkbox" class="filter" value="actie" checked> Actieseries</label>
+                </li>
+            </ul>
+        </li>
+        </div>
+    </nav>
+ 
+ 
     <hr>
     <header class="text-center p-5">
         <h2 class="fw-bold">Series.</h2>
         <p>Bekijk hier de series.</p>
     </header>
     <hr>
-
+ 
     <h4 class="top10">Top 10 series van vandaag</h4>
     <div id="carouselExample3" class="carousel slide top10">
         <div class="carousel-inner">
-
+ 
             <!-- Slide 1 -->
             <div class="carousel-item active ">
                 <div class="container">
@@ -67,11 +88,11 @@
                         <div class="col"><img src="img series marc/virginriver.png" alt="virginriver"></div>
                         <div class="col"><img src="img series marc/foto 4 one piece.jpg" alt="one piece"></div>
                         <div class="col"><img src="img series marc/homicide ny.webp" alt="homicide ny"></div>
-
+ 
                     </div>
                 </div>
             </div>
-
+ 
             <!-- Slide 2 -->
             <div class="carousel-item">
                 <div class="container">
@@ -85,25 +106,25 @@
                     </div>
                 </div>
             </div>
-
+ 
         </div>
-
+ 
         <!-- Knoppen -->
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample3" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </button>
-
+ 
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExample3" data-bs-slide="next">
             <span class="carousel-control-next-icon"></span>
         </button>
-
+ 
     </div>
-
+ 
     <h4 class="populair">Populaire series</h4>
     <div id="carouselPopulair" class="carousel slide populair">
-
+ 
         <div class="carousel-inner">
-
+ 
             <div class="carousel-item active">
                 <div class="container">
                     <div class="row text-center">
@@ -115,7 +136,7 @@
                     </div>
                 </div>
             </div>
-
+ 
             <div class="carousel-item">
                 <div class="container">
                     <div class="row text-center">
@@ -127,22 +148,22 @@
                     </div>
                 </div>
             </div>
-
+ 
         </div>
-
+ 
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselPopulair" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </button>
-
+ 
         <button class="carousel-control-next" type="button" data-bs-target="#carouselPopulair" data-bs-slide="next">
             <span class="carousel-control-next-icon"></span>
         </button>
     </div>
-
+ 
     <h4 class="actie">Actieseries</h4>
     <div id="carouselActie" class="carousel slide actie">
         <div class="carousel-inner">
-
+ 
             <div class="carousel-item active">
                 <div class="container">
                     <div class="row text-center">
@@ -154,7 +175,7 @@
                     </div>
                 </div>
             </div>
-
+ 
             <div class="carousel-item">
                 <div class="container">
                     <div class="row text-center">
@@ -166,22 +187,22 @@
                     </div>
                 </div>
             </div>
-
+ 
         </div>
-
+ 
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselActie" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </button>
-
+ 
         <button class="carousel-control-next" type="button" data-bs-target="#carouselActie" data-bs-slide="next">
             <span class="carousel-control-next-icon"></span>
         </button>
     </div>
-
+ 
     <footer class="text-center p-5">
         <p>&copy; 2024 Netflix</p>
     </footer>
-
+ 
     <script>
         function toggle() {
             const nav = document.getElementById("myTopnav");
@@ -190,24 +211,24 @@
             hamburger.classList.toggle("open");
         }
     </script>
-
+ 
     <script>
     const checkboxes = document.querySelectorAll('.filter');
-
+ 
     checkboxes.forEach(cb => {
         cb.addEventListener('change', () => {
             const category = cb.value;
             const elements = document.querySelectorAll('.' + category);
-
+ 
             elements.forEach(el => {
                 el.style.display = cb.checked ? '' : 'none';
             });
         });
     });
 </script>
-
+ 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
     </script>
 </body>
-
+ 
 </html>
