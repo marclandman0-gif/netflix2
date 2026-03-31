@@ -1,10 +1,9 @@
 /* ============================= */
 /* ALGEMEEN */
 /* ============================= */
-
 html, body {
-    background-color: #000;
-    color: #fff;
+    background-color: black !important;
+    color: white;
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -14,16 +13,20 @@ html, body {
 /* ============================= */
 /* NAVBAR */
 /* ============================= */
-
+nav {
+    background-color: black;
+    color: white;
+    padding: 0.5rem 1rem;
+}
 .topnav {
     position: sticky;
     top: 0;
+    background-color: black;
     width: 100%;
     z-index: 1000;
-    background-color: #000;
+    color: white;
     display: flex;
     align-items: center;
-    padding: 0.5rem 1rem;
 }
 
 /* Hamburger */
@@ -36,8 +39,7 @@ html, body {
     color: white;
     cursor: pointer;
 }
-
-/* Menu container */
+/* Menu */
 #menuItems ul {
     list-style: none;
     margin: 0;
@@ -45,12 +47,10 @@ html, body {
     display: flex;
     align-items: center;
 }
-
 #menuItems li {
     display: flex;
     align-items: center;
 }
-
 #menuItems a {
     display: flex;
     align-items: center;
@@ -61,24 +61,22 @@ html, body {
     font-size: 1rem;
     transition: transform 0.2s ease;
 }
-
 #menuItems a:hover {
     transform: scale(1.1);
 }
-
+ 
 /* Logo */
 #menuItems img {
     width: 7rem;
     height: auto;
 }
-
 /* Dropdown */
 .nav-item.dropdown {
     position: relative;
 }
-
+ 
 .dropdown-menu {
-    background-color: #000;
+    background-color: black;
     border: 1px solid #333;
     position: absolute;
     top: 100%;
@@ -86,23 +84,38 @@ html, body {
     display: none;
     min-width: 200px;
 }
-
 .nav-item.dropdown:hover .dropdown-menu {
     display: block;
 }
-
+ 
 .dropdown-item {
     color: white;
 }
-
+ 
 .dropdown-item:hover {
     background-color: #e50914;
     color: white;
 }
+
 .dropdown-menu label {
     color: white;
 }
 
+.nav-item {
+    list-style: none;
+}
+/* ============================= */
+/* NAVBAR ICONS */
+/* ============================= */
+
+/* Notificatie */
+.topnav .bi-bell {
+    cursor: pointer;
+}
+/* Badge */
+.badge {
+    font-size: 0.6rem;
+}
 /* Profiel icoon */
 .profile-icon {
     width: 40px;
@@ -111,9 +124,6 @@ html, body {
     cursor: pointer;
 }
 
-li {
-    list-style: none;
-}
 
 /* ============================= */
 /* HEADER */
@@ -129,14 +139,27 @@ header {
 
 
 /* ============================= */
-/* CAROUSELS */
+/* CONTENT / CAROUSEL */
 /* ============================= */
 
+.container, .row, .carousel-item, .col {
+    background-color: black;
+    color: white;
+}
+.col img {
+    max-width: 80%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+ 
+.col img:hover {
+    transform: scale(1.15);
+}
 h4 {
     color: white;
     margin-left: 1.5em;
 }
-
 .carousel img {
     width: 100%;
     height: 230px;
@@ -144,33 +167,20 @@ h4 {
     border-radius: 5px;
 }
 
-.col img {
-    max-width: 80%;
-    height: auto;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.col img:hover {
-    transform: scale(1.15);
-}
-
 
 /* ============================= */
-/* PROFIEL PAGINA */
+/* PROFIELEN PAGINA */
 /* ============================= */
 
 .profiles-page {
     background-color: #141414;
     text-align: center;
 }
-
 .title {
     margin-top: 80px;
     margin-bottom: 50px;
     font-size: 3rem;
 }
-
 .profile {
     cursor: pointer;
     transition: transform 0.3s;
@@ -185,12 +195,10 @@ h4 {
     height: 150px;
     border-radius: 10px;
 }
-
 .profile-name {
     margin-top: 10px;
     color: #aaa;
 }
-
 .add-profile {
     width: 150px;
     height: 150px;
@@ -202,14 +210,12 @@ h4 {
     font-size: 50px;
     color: #aaa;
 }
-
 .btn-manage {
     margin-top: 60px;
     border: 1px solid #aaa;
     color: #aaa;
     background: none;
 }
-
 .btn-manage:hover {
     background-color: #aaa;
     color: black;
@@ -224,7 +230,7 @@ footer {
     text-align: center;
     padding: 1rem;
 }
-
+ 
 footer img {
     width: 30px;
     margin: 0 10px;
@@ -237,22 +243,20 @@ footer img {
 /* RESPONSIVE */
 /* ============================= */
 
-/* Mobile */
 @media (max-width: 37.5rem) {
-
+ 
     #hamburger {
         display: block;
     }
-
+ 
     #menuItems {
         display: none;
         width: 100%;
     }
-
+ 
     .topnav.show #menuItems {
         display: block;
     }
-
     #menuItems ul {
         flex-direction: column;
         align-items: flex-start;
@@ -267,37 +271,39 @@ footer img {
         width: 100%;
         padding: 1rem;
     }
-
     .dropdown-menu {
         border: none;
         width: 100%;
     }
-
+ 
     .dropdown-item {
         padding-left: 2rem;
     }
-
     .carousel-item .row {
         display: flex;
         flex-wrap: nowrap;
     }
-
+ 
     .carousel-item .col {
         flex: 0 0 100%;
         max-width: 100%;
     }
 }
 
+
 /* Tablet */
 @media (min-width: 37.5rem) and (max-width: 64rem) {
+
     .carousel-item .col {
         flex: 0 0 33.33%;
         max-width: 33.33%;
     }
 }
 
+
 /* Desktop */
 @media (min-width: 64rem) {
+
     .carousel-item .col {
         flex: 0 0 20%;
         max-width: 20%;
