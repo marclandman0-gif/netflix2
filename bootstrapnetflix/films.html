@@ -15,40 +15,39 @@
  
 <body>
  
-     <nav id="myTopnav" class="topnav">
-        <button id="hamburger" class="icon" onclick="toggle()">
-            &#9776;
-        </button>
-        <div id="menuItems">
+    <nav id="myTopnav" class="topnav">
 
+    <!-- 🍔 Hamburger -->
+    <button id="hamburger" class="icon" onclick="toggle()">
+        &#9776;
+    </button>
 
-            <ul>
-                <li>
-                    <a href="index.html">
-                        <img src="img/netflixlogotext.png" alt="netflixtext">
-                    </a>
-                </li>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="films.html">Films</a></li>
-                <li><a href="series.html">Series</a></li>
-                <li><a href="inlog.html">Inlog</a></li>
-            </ul>
-        </div>
-<!-- ✅ Dropdown HIER plaatsen -->
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
-                Categorieën
-            </a>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="films.html#top10">Top 10</a></li>
-                <li><a class="dropdown-item" href="films.html#popular">Populaire films</a></li>
-                <li><a class="dropdown-item" href="films.html#action">Actiefilms</a></li>
-            </ul>
-        </li>
-    </ul>
-</div>
-        </div>
-    </nav>
+    <!-- 📂 Menu -->
+    <div id="menuItems">
+        <ul>
+
+            <!-- Logo -->
+            <li>
+                <a href="index.html">
+                    <img src="img/netflixlogotext.png" alt="netflixtext">
+                </a>
+            </li>
+
+            <li><a href="index.html">Home</a></li>
+            <li><a href="films.html">Films</a></li>
+            <li><a href="series.html">Series</a></li>
+
+        </ul>
+    </div>
+
+    <!-- 👤 Profiel rechts -->
+    <div class="ms-auto pe-3">
+        <a href="inlog.html">
+            <img src="img/acc1.png" class="profile-icon">
+        </a>
+    </div>
+
+</nav>
     <hr>
     <!-- Hero -->
     <header class="text-center p-5">
