@@ -1,3 +1,7 @@
+/* ============================= */
+/* ALGEMEEN */
+/* ============================= */
+ 
 html, body {
     background-color: black !important;
     color: white;
@@ -5,18 +9,24 @@ html, body {
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-
-/* Navigatiebalk */
-
+ 
+ 
+/* ============================= */
+/* NAVBAR */
+/* ============================= */
+ 
 .topnav {
     position: sticky;
     top: 0;
     background-color: black;
     width: 100%;
     z-index: 1000;
+ 
+    display: flex;
+    align-items: center;
 }
-
-/* Hamburger knop */
+ 
+/* Hamburger */
 #hamburger {
     display: none;
     font-size: 1.5rem;
@@ -26,29 +36,22 @@ html, body {
     color: white;
     cursor: pointer;
 }
-
-#hamburger.open {
-    background-color: black;
-    color: white;
-}
-
-/* Menu lijst */
-nav ul {
+ 
+/* Menu */
+#menuItems ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     align-items: center;
 }
-
-/* Menu items */
-nav li {
+ 
+#menuItems li {
     display: flex;
     align-items: center;
 }
-
-/* Links */
-nav a {
+ 
+#menuItems a {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -58,23 +61,22 @@ nav a {
     font-size: 1rem;
     transition: transform 0.2s ease;
 }
-
-nav a:hover {
+ 
+#menuItems a:hover {
     transform: scale(1.1);
 }
-
+ 
 /* Logo */
-nav img {
+#menuItems img {
     width: 7rem;
     height: auto;
 }
-
-
+ 
 /* Dropdown */
 .nav-item.dropdown {
     position: relative;
 }
-
+ 
 .dropdown-menu {
     background-color: black;
     border: 1px solid #333;
@@ -84,18 +86,50 @@ nav img {
     display: none;
     min-width: 200px;
 }
-
-/* Bootstrap hover fix */
+ 
 .nav-item.dropdown:hover .dropdown-menu {
     display: block;
 }
-
-label {
+ 
+.dropdown-item {
     color: white;
-    margin-right: 0.5rem;
 }
-
-/*achtergrond header*/
+ 
+.dropdown-item:hover {
+    background-color: #e50914;
+    color: white;
+}
+ 
+/* ============================= */
+/* NAVBAR ICONS */
+/* ============================= */
+ 
+/* Notificatie */
+.topnav .bi-bell {
+    cursor: pointer;
+}
+ 
+/* Badge */
+.badge {
+    font-size: 0.6rem;
+}
+ 
+/* Profiel icoon */
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+ 
+label{
+    color: white;
+}
+ 
+/* ============================= */
+/* HEADER */
+/* ============================= */
+ 
 header {
     background-color: black;
     color: white;
@@ -103,158 +137,188 @@ header {
     background-size: cover;
     background-position: center;
 }
-
-/* afbeedlingen en titels */
-
+ 
+ 
+/* ============================= */
+/* CONTENT / CAROUSEL */
+/* ============================= */
+ 
 .container, .row, .carousel-item, .col {
     background-color: black;
     color: white;
 }
-
-/* Afbeeldingen */
+ 
 .col img {
     max-width: 80%;
     height: auto;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
-
+ 
 .col img:hover {
     transform: scale(1.15);
 }
-
-/* Titels */
+ 
 h4 {
     color: white;
     margin-left: 1.5em;
 }
-
-/* Carousel styling */
-
+ 
 .carousel img {
     width: 100%;
     height: 230px;
     object-fit: cover;
     border-radius: 5px;
 }
-
-/*footer styling*/
-
+ 
+ 
+/* ============================= */
+/* PROFIELEN PAGINA */
+/* ============================= */
+ 
+.profiles-page {
+    background-color: #141414;
+    text-align: center;
+}
+ 
+.title {
+    margin-top: 80px;
+    margin-bottom: 50px;
+    font-size: 3rem;
+}
+ 
+.profile {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+ 
+.profile:hover {
+    transform: scale(1.1);
+}
+ 
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+ 
+.profile-name {
+    margin-top: 10px;
+    color: #aaa;
+}
+ 
+.add-profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: #aaa;
+}
+ 
+.btn-manage {
+    margin-top: 60px;
+    border: 1px solid #aaa;
+    color: #aaa;
+    background: none;
+}
+ 
+.btn-manage:hover {
+    background-color: #aaa;
+    color: black;
+}
+ 
+ 
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+ 
 footer {
     text-align: center;
     padding: 1rem;
 }
-
+ 
 footer img {
     width: 30px;
-    height: auto;
     margin: 0 10px;
     filter: grayscale(100%);
     transition: filter 0.3s ease;
 }
-
-/*responsiveness*/
-
+ 
+ 
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+ 
 @media (max-width: 37.5rem) {
-
+ 
     #hamburger {
         display: block;
     }
-
+ 
     #menuItems {
         display: none;
         width: 100%;
     }
-
+ 
     .topnav.show #menuItems {
         display: block;
     }
-
-    nav ul {
+ 
+    #menuItems ul {
         flex-direction: column;
         align-items: flex-start;
         width: 100%;
-        text-align: left;
     }
-
-    nav li {
+ 
+    #menuItems li {
         width: 100%;
     }
-
-    nav a {
+ 
+    #menuItems a {
         width: 100%;
         padding: 1rem;
     }
-
-    /* Dropdown mobiel */
+ 
     .dropdown-menu {
         border: none;
         width: 100%;
     }
-
+ 
     .dropdown-item {
         padding-left: 2rem;
     }
-
-    /* TELEFOON, 1 afbeelding per slide */
+ 
     .carousel-item .row {
         display: flex;
         flex-wrap: nowrap;
     }
-
+ 
     .carousel-item .col {
         flex: 0 0 100%;
         max-width: 100%;
     }
-
-    .carousel-item img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
 }
-
-
-/* Ipad, 3 afbeeldingen per slide */
-
-
+ 
+ 
+/* Tablet */
 @media (min-width: 37.5rem) and (max-width: 64rem) {
-
-    .carousel-item .row {
-        display: flex;
-        flex-wrap: nowrap;
-    }
-
+ 
     .carousel-item .col {
         flex: 0 0 33.33%;
         max-width: 33.33%;
     }
-
-    .carousel-item img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
 }
-
-/* DESKTOP, 5 afbeeldingen per slide */
-
-
+ 
+ 
+/* Desktop */
 @media (min-width: 64rem) {
-
-    .carousel-item .row {
-        display: flex;
-        flex-wrap: nowrap;
-    }
-
+ 
     .carousel-item .col {
         flex: 0 0 20%;
         max-width: 20%;
-    }
-
-    .carousel-item img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
     }
 }
