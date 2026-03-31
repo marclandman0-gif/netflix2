@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="nl">
- 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="img/netflixico.ico">
- 
+
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
- 
+
     <title>Films - Netflix</title>
 </head>
- 
+
 <body>
+
+
+    <nav id="myTopnav" class="topnav">
  
     <nav id="myTopnav" class="topnav">
 
@@ -55,224 +58,229 @@
         <p>Bekijk hier alle films.</p>
     </header>
     <hr>
-   <h4>Top 10 van films in Nederland vandaag</h4>
-<div id="top10Carousel" class="carousel slide"
-     data-bs-touch="true"
-     data-bs-wrap="true"
-     data-bs-interval="false">
+    <h4 class="top10">Top 10 van vandaag</h4>
+    <div id="carouselTop10" class="carousel slide top10">
 
-    <div class="carousel-inner">
+        <div class="carousel-inner">
 
-        <!-- Slide 1 -->
-        <div class="carousel-item active">
-            <div class="container">
-                <div class="row text-center g-3">
-                    <div class="col"><img src="img popular/foto 1 immorttal man.jpg" alt="immorttal man"></div>
-                    <div class="col"><img src="img popular/foto 6 war machine.jpg" alt="war machine"></div>
-                    <div class="col"><img src="img popular/loius theroux.jpg" alt="Louis Theroux"></div>
-                    <div class="col"><img src="img films/top 10 films vandaag/french girl.jpg" alt="french girl"></div>
-                    <div class="col"><img src="img films/top 10 films vandaag/27 Dresses.jpg" alt="27 Dresses"></div>
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="row text-center g-3">
+                        <div class="col"><img src="img popular/foto 1 immorttal man.jpg" alt="immorttal man"></div>
+                        <div class="col"><img src="img popular/foto 6 war machine.jpg" alt="war machine"></div>
+                        <div class="col"><img src="img popular/loius theroux.jpg" alt="Louis Theroux"></div>
+                        <div class="col"><img src="img films/top 10 films vandaag/french girl.jpg" alt="french girl">
+                        </div>
+                        <div class="col"><img src="img films/top 10 films vandaag/27 Dresses.jpg" alt="27 Dresses">
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Slide 2 -->
-        <div class="carousel-item">
-            <div class="container">
-                <div class="row text-center g-3">
-                    <div class="col"><img src="img films/top 10 films vandaag/Double jeopardy.jpg" alt="Double jeopardy"></div>
-                    <div class="col"><img src="img films/top 10 films vandaag/this where i leave you.png" alt="thiswhereileaveyou"></div>
-                    <div class="col"><img src="img films/top 10 films vandaag/Shark tale.webp" alt="Shark tale"></div>
-                    <div class="col"><img src="img films/top 10 films vandaag/space jam.jpg" alt="Space jam"></div>
-                    <div class="col"><img src="img films/top 10 films vandaag/despicable me 4.jpg" alt="Despicable me 4"></div>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row text-center g-3">
+                        <div class="col"><img src="img films/top 10 films vandaag/Double jeopardy.jpg"
+                                alt="Double jeopardy"></div>
+                        <div class="col"><img src="img films/top 10 films vandaag/this where i leave you.png"
+                                alt="thiswhereileaveyou"></div>
+                        <div class="col"><img src="img films/top 10 films vandaag/Shark tale.webp" alt="Shark tale">
+                        </div>
+                        <div class="col"><img src="img films/top 10 films vandaag/space jam.jpg" alt="Space jam"></div>
+                        <div class="col"><img src="img films/top 10 films vandaag/despicable me 4.jpg"
+                                alt="Despicable me 4"></div>
+                    </div>
                 </div>
             </div>
+
         </div>
 
+        <!-- Knoppen -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselTop10" data-bs-slide="prev"><span class="carousel.control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselTop10" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
     </div>
 
-    <!-- Knoppen -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#top10Carousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#top10Carousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-    </button>
-</div>
- 
-<h4>Populaire films</h4>
-<div id="popularCarousel" class="carousel slide"
-     data-bs-touch="true"
-     data-bs-wrap="true"
-     data-bs-interval="false">
+    <h4 class="populair">Populaire films</h4>
+    <div id="carouselPopulair" class="carousel slide populair">
 
-    <div class="carousel-inner">
+        <div class="carousel-inner">
 
-        <!-- Slide 1 -->
-        <div class="carousel-item active">
-            <div class="container">
-                <div class="row text-center g-3">
-                    <div class="col"><img src="img films/foto 1 immorttal man1.jpg" alt="Peaky Blinders film"></div>
-                    <div class="col"><img src="img films/comedyfilms/home alone.png" alt="Home Alone film"></div>
-                    <div class="col"><img src="img films/comedyfilms/Klem (1).png" alt="klem film"></div>
-                    <div class="col"><img src="img films/comedyfilms/Empire Amsterdam.png" alt="Empire Amsterdam"></div>
-                    <div class="col"><img src="img films/ome cor.png" alt="ome cor"></div>
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="row text-center g-3">
+                        <div class="col"><img src="img films/foto 1 immorttal man1.jpg" alt="Peaky Blinders film"></div>
+                        <div class="col"><img src="img films/comedyfilms/home alone.png" alt="Home Alone film"></div>
+                        <div class="col"><img src="img films/comedyfilms/Klem (1).png" alt="klem film"></div>
+                        <div class="col"><img src="img films/comedyfilms/Empire Amsterdam.png" alt="Empire Amsterdam">
+                        </div>
+                        <div class="col"><img src="img films/ome cor.png" alt="ome cor"></div>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Slide 2 -->
-        <div class="carousel-item">
-            <div class="container">
-                <div class="row text-center g-3">
-                    <div class="col"><img src="img films/comedyfilms/Casino Royale.png" alt="Casino Royale"></div>
-                    <div class="col"><img src="img films/comedyfilms/Ferry.png" alt="Ferry"></div>
-                    <div class="col"><img src="img films/comedyfilms/Takers.png" alt="Takers"></div>
-                    <div class="col"><img src="img films/comedyfilms/power.png" alt="Power"></div>
-                    <div class="col"><img src="img films/comedyfilms/Extraction 3.png" alt="Extraction 3"></div>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row text-center g-3">
+                        <div class="col"><img src="img films/comedyfilms/Casino Royale.png" alt="Casino Royale"></div>
+                        <div class="col"><img src="img films/comedyfilms/Ferry.png" alt="Ferry"></div>
+                        <div class="col"><img src="img films/comedyfilms/Takers.png" alt="Takers"></div>
+                        <div class="col"><img src="img films/comedyfilms/power.png" alt="Power"></div>
+                        <div class="col"><img src="img films/comedyfilms/Extraction 3.png" alt="Extraction 3"></div>
+                    </div>
                 </div>
             </div>
+
         </div>
 
+        <!-- Knoppen -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPopulair" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselPopulair" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
     </div>
 
-    <!-- Knoppen -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#popularCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#popularCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-    </button>
-</div>
- 
-<h4>Actiefilms</h4>
-<div id="actionCarousel" class="carousel slide" data-bs-touch="false">
-    <div class="carousel-inner">
- 
-        <!-- Slide 1 -->
-        <div class="carousel-item active">
-            <div class="container">
-                <div class="row text-center g-3">
-                    <div class="col"><img src="img films/Luther.png" alt="Luther"></div>
-                    <div class="col"><img src="img films/heart of stone.png" alt="heart of stone"></div>
-                    <div class="col"><img src="img films/Havoc.png" alt="havoc"></div>
-                    <div class="col"><img src="img films/img actiefilms/magnificent seven.png" alt="magnificent seven"></div>
-                    <div class="col"><img src="img films/img actiefilms/red notice.png" alt="Red Notice"></div>
-                </div>
-            </div>
-        </div>
- 
-        <!-- Slide 2 -->
-        <div class="carousel-item">
-            <div class="container">
-                <div class="row text-center g-3">
-                    <div class="col"><img src="img films/img actiefilms/Atlas.png" alt="Atlas film"></div>
-                    <div class="col"><img src="img films/img actiefilms/back in action.png" alt="Back in Action film"></div>
-                    <div class="col"><img src="img films/img actiefilms/damsel.png" alt="Damsel film"></div>
-                    <div class="col"><img src="img films/img actiefilms/troll 2.png" alt="Troll 2 film"></div>
-                    <div class="col"><img src="img films/img actiefilms/the rip.png" alt="The Rip film"></div>
-                </div>
-            </div>
-        </div>
- 
-    </div>
- 
-    <!-- Knoppen -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#actionCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#actionCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-    </button>
-</div>
- 
-<h4>Horrorfilms</h4>
-<div id="horrorCarousel" class="carousel slide" data-bs-touch="false">
-    <div class="carousel-inner">
- 
-        <!-- Slide 1 -->
-        <div class="carousel-item active">
-            <div class="container">
-                <div class="row text-center g-3">
-                    <div class="col"><img src="img films/horrorfilms/28 years later.png" alt="28 years later"></div>
-                    <div class="col"><img src="img films/horrorfilms/babysitter.png" alt="babysitter"></div>
-                    <div class="col"><img src="img films/horrorfilms/Bird box.png" alt="Bird box"></div>
-                    <div class="col"><img src="img films/horrorfilms/blood red sky.png" alt="blood red sky"></div>
-                    <div class="col"><img src="img films/horrorfilms/chainsaw massacre.png" alt="chainsaw massacre"></div>
-                </div>
-            </div>
-        </div>
- 
-        <!-- Slide 2 -->
-        <div class="carousel-item">
-            <div class="container">
-                <div class="row text-center g-3">
-                    <div class="col"><img src="img films/horrorfilms/dont breathe.png" alt="dont breathe"></div>
-                    <div class="col"><img src="img films/horrorfilms/fenomenas.png" alt="fenomenas"></div>
-                    <div class="col"><img src="img films/horrorfilms/konderensen.png" alt="konderensen"></div>
-                    <div class="col"><img src="img films/horrorfilms/scary movie.png" alt="scary movie"></div>
-                    <div class="col"><img src="img films/horrorfilms/until night.png" alt="until night"></div>
-                </div>
-            </div>
-        </div>
- 
-    </div>
- 
-    <!-- Knoppen -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#horrorCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#horrorCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-    </button>
-</div>
- 
-<h4>Comedyfilms</h4>
- 
-<div id="comedyCarousel" class="carousel slide" data-bs-touch="false">
-    <div class="carousel-inner">
- 
-        <!-- Slide 1 -->
-        <div class="carousel-item active">
-            <div class="container">
-                <div class="row text-center g-3">
-                    <div class="col"><img src="img films/comedyfilms/adam project.png" alt="adam project"></div>
-                    <div class="col"><img src="img films/comedyfilms/bad boys.png" alt="bad boys"></div>
-                    <div class="col"><img src="img films/comedyfilms/lift.png" alt="lift"></div>
-                    <div class="col"><img src="img films/comedyfilms/murder mystery.png" alt="murder mystery"></div>
-                    <div class="col"><img src="img films/comedyfilms/the union.png" alt="the union"></div>
-                </div>
-            </div>
-        </div>
- 
-        <!-- Slide 2 -->
-        <div class="carousel-item">
-            <div class="container">
-                <div class="row text-center g-3">
-                    <div class="col"><img src="img films/comedyfilms/Hangover part 3.png" alt="Hangover part 3"></div>
-                    <div class="col"><img src="img films/comedyfilms/Superbad.png" alt="Superbad"></div>
-                    <div class="col"><img src="img films/comedyfilms/Meangirls.png" alt="Mean Grils"></div>
-                    <div class="col"><img src="img films/comedyfilms/Stepbrothers.png" alt="Step Brothers"></div>
-                    <div class="col"><img src="img films/comedyfilms/Deadpool3.png" alt="Deadpool3"></div>
-                </div>
-            </div>
-        </div>
- 
-    </div>
- 
-    <!-- Knoppen -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#comedyCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#comedyCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-    </button>
-</div>
- 
+    <h4 class="actie">Actiefilms</h4>
+    <div id="carouselActie" class="carousel slide actie">
+        <div class="carousel-inner">
 
-<footer class="text-center p-5">
-    <p>&copy; 2024 Netflix</p>
-</footer>
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="row text-center g-3">
+                        <div class="col"><img src="img films/Luther.png" alt="Luther"></div>
+                        <div class="col"><img src="img films/heart of stone.png" alt="heart of stone"></div>
+                        <div class="col"><img src="img films/Havoc.png" alt="havoc"></div>
+                        <div class="col"><img src="img films/img actiefilms/magnificent seven.png"
+                                alt="magnificent seven"></div>
+                        <div class="col"><img src="img films/img actiefilms/red notice.png" alt="Red Notice"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row text-center g-3">
+                        <div class="col"><img src="img films/img actiefilms/Atlas.png" alt="Atlas film"></div>
+                        <div class="col"><img src="img films/img actiefilms/back in action.png"
+                                alt="Back in Action film"></div>
+                        <div class="col"><img src="img films/img actiefilms/damsel.png" alt="Damsel film"></div>
+                        <div class="col"><img src="img films/img actiefilms/troll 2.png" alt="Troll 2 film"></div>
+                        <div class="col"><img src="img films/img actiefilms/the rip.png" alt="The Rip film"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Knoppen -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselActie" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselActie" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <h4 class="horror">Horrorfilms</h4>
+    <div id="carouselHorror" class="carousel slide horror">
+
+        <div class="carousel-inner">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="row text-center g-3">
+                        <div class="col"><img src="img films/horrorfilms/28 years later.png" alt="28 years later"></div>
+                        <div class="col"><img src="img films/horrorfilms/babysitter.png" alt="babysitter"></div>
+                        <div class="col"><img src="img films/horrorfilms/Bird box.png" alt="Bird box"></div>
+                        <div class="col"><img src="img films/horrorfilms/blood red sky.png" alt="blood red sky"></div>
+                        <div class="col"><img src="img films/horrorfilms/chainsaw massacre.png" alt="chainsaw massacre">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row text-center g-3">
+                        <div class="col"><img src="img films/horrorfilms/dont breathe.png" alt="dont breathe"></div>
+                        <div class="col"><img src="img films/horrorfilms/fenomenas.png" alt="fenomenas"></div>
+                        <div class="col"><img src="img films/horrorfilms/konderensen.png" alt="konderensen"></div>
+                        <div class="col"><img src="img films/horrorfilms/scary movie.png" alt="scary movie"></div>
+                        <div class="col"><img src="img films/horrorfilms/until night.png" alt="until night"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Knoppen -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselHorror" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselHorror" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <h4 class="comedy">Comedy films</h4>
+    <div id="carouselComedy" class="carousel slide comedy">
+
+        <div class="carousel-inner">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="row text-center g-3">
+                        <div class="col"><img src="img films/comedyfilms/adam project.png" alt="adam project"></div>
+                        <div class="col"><img src="img films/comedyfilms/bad boys.png" alt="bad boys"></div>
+                        <div class="col"><img src="img films/comedyfilms/lift.png" alt="lift"></div>
+                        <div class="col"><img src="img films/comedyfilms/murder mystery.png" alt="murder mystery"></div>
+                        <div class="col"><img src="img films/comedyfilms/the union.png" alt="the union"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row text-center g-3">
+                        <div class="col"><img src="img films/comedyfilms/Hangover part 3.png" alt="Hangover part 3">
+                        </div>
+                        <div class="col"><img src="img films/comedyfilms/Superbad.png" alt="Superbad"></div>
+                        <div class="col"><img src="img films/comedyfilms/Meangirls.png" alt="Mean Grils"></div>
+                        <div class="col"><img src="img films/comedyfilms/Stepbrothers.png" alt="Step Brothers"></div>
+                        <div class="col"><img src="img films/comedyfilms/Deadpool3.png" alt="Deadpool3"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Knoppen -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselComedy" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselComedy" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+
+    <footer class="text-center p-5">
+        <p>&copy; 2024 Netflix</p>
+    </footer>
     <script>
         function toggle() {
             const nav = document.getElementById("myTopnav");
@@ -281,10 +289,24 @@
             hamburger.classList.toggle("open");
         }
     </script>
- 
- 
+
+    <script>
+        const checkboxes = document.querySelectorAll('.filter');
+
+        checkboxes.forEach(cb => {
+            cb.addEventListener('change', () => {
+                const category = cb.value;
+                const elements = document.querySelectorAll('.' + category);
+
+                elements.forEach(el => {
+                    el.style.display = cb.checked ? '' : 'none';
+                });
+            });
+        });
+    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
- 
+
 </body>
- 
+
 </html>
